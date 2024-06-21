@@ -1,0 +1,41 @@
+{
+    "CONSTANTS": {
+        "DATABASE_COLLECTIONS": {
+            "USERS": "user",
+            "OTPS": "otp",
+            "TEST": "test",
+            "CONTACT": "contact",
+            "CENTER" : "center",
+            "BOOKING" : "booking",
+            "CENTER_OTPS": "center-otp",
+            "CENTER_VERIFY": "center-verify",
+            "ORDERED_TEST": "ordered-test",
+            "PAYMENT": "payment"
+        },
+        "STATUS": {
+            "ACTIVE": "ACTIVE",
+            "INACTIVE": "INACTIVE",
+            "PENDING": "PENDING",
+            "VISITED" : "VISITED" ,
+            "PUBLISHED" : "PUBLISHED",
+            "ACCEPTED" : "ACCEPTED",
+            "REJECTED" : "REJECTED",
+            "ONGOING": "ONGOING",
+            "PREVIOUS": "PREVIOUS"
+        },
+
+        "ROLES": {
+            "USER": "USER",
+            "PATIENT": "PATIENT",
+            "CENTER": "CENTER"
+        },
+
+        "AVAILABLE": {
+            "YES": "YES",
+            "NO": "NO"
+        }
+    },
+    "JWT_SECRET": "reierjuoreitn",
+    "JWT_ACCESS_TOKEN_EXPIRY": "720h",
+    "OTP_LENGTH": 4
+}

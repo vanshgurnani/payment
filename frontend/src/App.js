@@ -7,7 +7,7 @@ const PaymentComponent = () => {
   const handlePayment = async () => {
     try {
       // Create order on the server
-      const orderResponse = await axios.get(`http://localhost:3000/api/pay/checkout?amount=${amount}`);
+      const orderResponse = await axios.get(`https://diagonistic-backend.vercel.app/api/pay/checkout?amount=${amount}`);
       const { order } = orderResponse.data;
 
       // Options for Razorpay payment
@@ -15,14 +15,14 @@ const PaymentComponent = () => {
         key: order.key, // Replace with your Razorpay key ID
         amount: order.amount,
         currency: order.currency,
-        name: 'Your Company Name',
+        name: 'DiagnoWeb.com',
         description: 'Test Transaction',
         image: 'https://your-logo-url.com/logo.png',
         order_id: order.id,
         handler: async (response) => {
           try {
             // Verify payment on the server
-            await axios.post('http://localhost:3000/api/pay/paymentVerification', {
+            await axios.post('https://diagonistic-backend.vercel.app/api/pay/paymentVerification', {
               razorpay_payment_id: response.razorpay_payment_id,
               razorpay_order_id: response.razorpay_order_id,
               razorpay_signature: response.razorpay_signature,
